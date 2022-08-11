@@ -18,6 +18,21 @@ function divideNum (firstNum, nextNum){
     return division;
 }
 
+function operate (operator, firstNum, nextNum){
+  if (operator == add){
+    addNum(firstNum, nextNum);
+  }
+  else if (operator == substract){
+    substractNum(firstNum, nextNum);
+  }
+  else if (operator == multiply){
+    multiplyNum(firstNum, nextNum);
+  }
+  else if (operator == divide){
+    divideNum(firstNum, nextNum);
+  }
+}
+
 window.addEventListener("DOMContentLoaded", function() {
     let boxes = document.querySelectorAll(".grid-container");
   
