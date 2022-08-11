@@ -39,7 +39,15 @@ window.addEventListener("DOMContentLoaded", function() {
     Array.from(boxes, function(box) {
       box.addEventListener("click", function() {
         let message = box.id;
-        alert(message);
+        const display = document.getElementById("display");
+        display.innerHTML = box.id;
+        display.style.gridColumn = `1 / span 4`;
+        display.style.gridRow = `1`;
+        display.style.padding =`20px`;
+        display.style.backgroundColor = `rgba(255, 255, 255, 0.8)`;
       });
     });
   });
+
+ 
+  
