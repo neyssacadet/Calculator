@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", function() {
   
     Array.from(boxes, function(box) {
       box.addEventListener("click", function() {
-        let message = "YASS!";
+        let message = box.id;
         alert(message);
       });
     });
