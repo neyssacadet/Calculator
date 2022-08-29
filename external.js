@@ -1,25 +1,37 @@
 function addNum (firstNum, nextNum){
-    let addition = firstNum + nextNum;
-    return addition;
+    return firstNum + nextNum;
 }
 
 function substractNum (firstNum, nextNum){
-    let substraction = firstNum - nextNum;
-    return substraction;
+    return firstNum - nextNum;
 }
 
 function multiplyNum (firstNum, nextNum){
-    let multiplication = firstNum * nextNum; 
-    return multiplication;
+    return firstNum * nextNum; 
 }
 
 function divideNum (firstNum, nextNum){
-    let division = firstNum/nextNum;
-    return division;
+    return firstNum/nextNum;
 }
 
+
+const operator = "";
+
+function operate (firstNum, nextNum){
+  switch(operator){
+    case "+":
+      addNum (firstNum, nextNum);
+    case "-":
+      substractNum (firstNum, nextNum);
+    case "*":
+      multiplyNum (firstNum, nextNum);
+    case "/":
+      divideNum (firstNum, nextNum);
+  }
+}
+/*
 function operate (operator, firstNum, nextNum){
-  if (operator == add){
+  if (operator == box.id){
     addNum(firstNum, nextNum);
   }
   else if (operator == substract){
@@ -31,7 +43,9 @@ function operate (operator, firstNum, nextNum){
   else if (operator == divide){
     divideNum(firstNum, nextNum);
   }
+ 
 }
+
 
 window.addEventListener("DOMContentLoaded", function() {
     let boxes = document.querySelectorAll(".grid-container");
@@ -48,4 +62,4 @@ window.addEventListener("DOMContentLoaded", function() {
       });
     });
   });
-
+*/

@@ -13,6 +13,7 @@ body {
     grid-template-columns: 100px 100px 100px 100px;
     padding: 10px;
     border-radius: 25px;
+    align-content: center;
 }
 
 .display {
