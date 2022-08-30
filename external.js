@@ -1,65 +1,81 @@
-function addNum (firstNum, nextNum){
-    return firstNum + nextNum;
+let message = ""; 
+
+
+// functions for operating 2 numbers 
+function addNum (a, b){
+    return a + b;
 }
+console.log(addNum(2,3));
 
-function substractNum (firstNum, nextNum){
-    return firstNum - nextNum;
+function substractNum (a, b){
+    return a - b;
 }
+console.log(substractNum(2,3));
 
-function multiplyNum (firstNum, nextNum){
-    return firstNum * nextNum; 
+function multiplyNum (a, b){
+    return a * b; 
 }
+console.log(multiplyNum(2,3));
 
-function divideNum (firstNum, nextNum){
-    return firstNum/nextNum;
+function divideNum (a, b){
+    return a/b;
 }
+console.log(divideNum(2,3));
 
-
-const operator = "";
-
-function operate (firstNum, nextNum){
-  switch(operator){
-    case "+":
-      addNum (firstNum, nextNum);
-    case "-":
-      substractNum (firstNum, nextNum);
-    case "*":
-      multiplyNum (firstNum, nextNum);
-    case "/":
-      divideNum (firstNum, nextNum);
-  }
-}
-/*
-function operate (operator, firstNum, nextNum){
-  if (operator == box.id){
+/*let operator = "";
+//function that takes an operator and 2 numbers
+function operate(operator, firstNum, nextNum){
+  if(operator = "+"){
     addNum(firstNum, nextNum);
   }
+  else{
+    alert("error");
+  }
+}
+
+
+function that takes an operator and 2 numbers and calls another function
+function operate (a, b){
+  switch(operator){
+    case "+":
+      addNum (a, b);
+    case "-":
+      substractNum (a, b);
+    case "*":
+      multiplyNum (a, b);
+    case "/":
+      divideNum (a, b);
+  }
+}
+
+function operate (operator, a, b){
+  if (operator == box.id){
+    addNum(a, b);
+  }
   else if (operator == substract){
-    substractNum(firstNum, nextNum);
+    substractNum(a, b);
   }
   else if (operator == multiply){
-    multiplyNum(firstNum, nextNum);
+    multiplyNum(a, b);
   }
   else if (operator == divide){
-    divideNum(firstNum, nextNum);
+    divideNum(a, b);
   }
  
-}
+}*/
+
 
 
 window.addEventListener("DOMContentLoaded", function() {
-    let boxes = document.querySelectorAll(".grid-container");
-  
+  let boxes = document.querySelectorAll(".grid-container");
     Array.from(boxes, function(box) {
       box.addEventListener("click", function() {
-        let message = box.id;
+        message = message + box.id;
         const display = document.getElementById("display");
-        display.innerHTML = box.id;
-        display.style.gridColumn = `1 / span 4`;
-        display.style.gridRow = `1`;
-        display.style.padding =`20px`;
-        display.style.backgroundColor = `rgba(255, 255, 255, 0.8)`;
+        display.innerHTML = message;
       });
     });
   });
-*/
+
+
+
